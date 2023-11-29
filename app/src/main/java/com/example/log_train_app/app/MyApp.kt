@@ -1,14 +1,17 @@
 package com.example.log_train_app.app
 
 import android.util.Log
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.log_train_app.screens.BottomSheetScreen
 import com.example.log_train_app.screens.SignInScreen
 import com.example.log_train_app.screens.SignUpScreen
 import com.example.log_train_app.screens.TermsAndConditionsScreen
 
+@ExperimentalMaterialApi
 @Composable
 fun MyApp() {
     val navController = rememberNavController()
@@ -25,6 +28,9 @@ fun MyApp() {
             TermsAndConditionsScreen(navController = navController)
             Log.d("composeTest MyApp", ": startingDestination = TermsAndConditionsScreen")
 
+        }
+        composable("bottom"){
+            BottomSheetScreen()
         }
     }
 }

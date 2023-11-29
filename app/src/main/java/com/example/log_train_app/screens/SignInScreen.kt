@@ -53,7 +53,7 @@ fun SignInScreen(navController:NavHostController) {
             Spacer(modifier = Modifier.height(20.dp))
             ComposableButton(value = stringResource(R.string.sign_in))
             ORSpacer()
-            SignInWithCompose()
+            SignInWithCompose(navController)
 
             DynamicClickable_DontHaveAnAccount(navController)
             

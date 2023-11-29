@@ -67,7 +67,7 @@ fun SignUpScreen(navController: NavHostController) {
 
             ORSpacer()
 
-            SignInWithCompose()
+            SignInWithCompose(navController)
 
 
 //           Spacer to push the text to the bottom

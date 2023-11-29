@@ -307,7 +307,7 @@ fun ORSpacer() {
 
 
 @Composable
-fun SignInWithCompose() {
+fun SignInWithCompose(navController: NavHostController) {
     val context = LocalContext.current
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -330,9 +330,7 @@ fun SignInWithCompose() {
                 modifier = Modifier
                     .padding(all = 16.dp)
                     .clickable {
-                        Toast
-                            .makeText(context, "facebook sign in action", Toast.LENGTH_SHORT)
-                            .show()
+                        navController.navigate("bottom")
                     })
         }
     }
